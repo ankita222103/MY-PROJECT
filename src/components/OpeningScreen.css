@@ -1,0 +1,105 @@
+.main1 {
+    background-image: url("../../victus_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+  .logo img{
+    width:45vw;
+    height:auto;
+    border-radius: 30%;
+  }
+  .logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+  }
+  /** carefully see the technique used above to center both vertically and horizontally an img element*/
+  .logo {
+    text-align: center;
+    flex-direction:column;
+  }
+  
+  .lines,.name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+
+
+  
+  .line {
+    color: white;
+    font-size: 24px;
+    margin: 10px 0;
+  }
+
+  .Name{
+    color: grey;
+    font-size: 10vh;
+  }
+
+
+
+
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @media (max-width:550px){
+    .btn{
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 4%;
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 3%;
+      font-size: 3vh;
+      border-radius: 8%;
+      animation: fadeIn 2s forwards; 
+    }
+    .name{
+      bottom: 0;
+      padding: 6%;
+      position: absolute;/** if u dont use position:absolute then the logo is getting pushed, it helps in removing 
+      the stuff out of normal workflow hence the logo is again centred*/
+      padding-bottom: 22vh;
+    }
+    .lines{
+      position:absolute;
+      bottom:0;
+      padding-bottom: 17%;
+    }
+  }
+
+  @media (min-width: 600px){
+    .logo img{
+      width: 25vw;
+      height: auto;
+      border-radius: 30%;
+      margin-top: 6vh;
+    }
+    .lines{
+      padding-bottom: 2vh;
+    }
+    .btn{
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 2vh;
+      font-size: 3vh;
+      border-radius: 8%;
+      animation: fadeIn 2s forwards;
+    }
+  }
+  
